@@ -1,0 +1,40 @@
+header {	
+	background: #1c1c1c;
+}
+.header-wrapper {
+	margin: 0 auto;
+	width: 800px;
+	height: 50px;
+	color: #fff;
+	padding: 10px 100px;
+}
+.header-wrapper .brand {
+	display: inline-block;
+	overflow: hidden;
+	height: 100%;
+	line-height: 52px;
+	font-size: 20px;	
+}
+.header-wrapper a {
+	color: rgba(255,255,255,.8);
+}
+.header-wrapper a:hover {
+	color: #fff;
+}
+.header-wrapper .brand img {
+	margin-right: 30px;
+	float:left;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.header-wrapper .menu {
+	display: none;
+}
+#headerNav {
+	float: right;
+}
+#headerNav a.active{
+	color: #6ECBC0;
+	text-shadow: 0 0 1px rgba(255,255,255,.9) inset;
+}

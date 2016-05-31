@@ -1,0 +1,22 @@
+.site-footer {
+	padding: 10px 0;
+	height: 100px;
+	background: #1c1c1c;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+}
+.footer-wrapper a{
+	color: #fff;
+}
+.footer-wrapper a:hover {
+	color: #6ECBC0;
+}
+.footer-wrapper .contact a{
+	margin: 0 5px;
+	font-size: 20px;
+}
+.power a{
+	color: #6ECBC0;
+	text-decoration: underline;
+}
