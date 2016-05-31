@@ -16,10 +16,7 @@ header {
 	font-size: 20px;	
 }
 .header-wrapper a {
-	color: rgba(255,255,255,.8);
-}
-.header-wrapper a:hover {
-	color: #fff;
+	color:#ECB926;
 }
 .header-wrapper .brand img {
 	margin-right: 30px;
@@ -28,13 +25,91 @@ header {
 	height: 50px;
 	border-radius: 50%;
 }
+.header-wrapper .brand img:hover {
+	-webkit-animation: swing 1s;
+	animation: swing 1s;
+}
 .header-wrapper .menu {
 	display: none;
 }
 #headerNav {
 	float: right;
 }
+#headerNav a {
+	position: relative;
+}
+#headerNav a:after {
+	display:block;
+	position: absolute;
+	top: 20px;
+	width: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);;
+	transform: translateX(-50%);
+	margin: 0 auto;
+	content: '';
+	height: 1px;
+	background: #fff;
+	-webkit-transition: width .2s ease-in;
+}
+#headerNav a:hover:after{
+	width: 100%;
+}
 #headerNav a.active{
-	color: #6ECBC0;
+	color: #ECB926;
 	text-shadow: 0 0 1px rgba(255,255,255,.9) inset;
 }
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 20deg);
+    transform: rotate3d(0, 0, 1, 20deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -14deg);
+    transform: rotate3d(0, 0, 1, -14deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 20deg);
+    transform: rotate3d(0, 0, 1, 20deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -14deg);
+    transform: rotate3d(0, 0, 1, -14deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
