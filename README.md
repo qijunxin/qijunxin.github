@@ -1,2 +1,3 @@
-# qijunxin.github
-齐俊鑫（伊一）个人博客
+Personal blog http://qijunxin.github.io
+Created by Qi Junxin
+Site powered by Jekyll & Github Pages
