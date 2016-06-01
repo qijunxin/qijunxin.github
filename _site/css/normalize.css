@@ -6,7 +6,7 @@
  */
 
 html {
-  font-family: sans-serif; /* 1 */
+  font-family: Helvetica,Arial,"Hiragino Sans GB","Microsoft Yahei","微软雅黑",STHeiti,"华文细黑",sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -98,6 +98,7 @@ a {
   background-color: transparent; /* 1 */
   -webkit-text-decoration-skip: objects; /* 2 */
   text-decoration: none;
+  color: #6ECBC0;
 }
 
 /**

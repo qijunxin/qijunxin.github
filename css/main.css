@@ -1,0 +1,17 @@
+.container {
+	width: 800px;
+	margin: 0 auto;
+	padding: 10px 100px;
+}
+.container .post-link {
+    
+}
+/*文章样式*/
+.page .label {
+    margin-top: 16px;
+    overflow: hidden;
+}
+.page .label .label-card {
+    float: left;
+    margin-right: 15px;
+}
