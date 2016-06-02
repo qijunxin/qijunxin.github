@@ -39,9 +39,9 @@
         var scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop);
 
         if (scrollTop > 200) {
-            backToTop.classList.add('show');
+            backToTop.classList.add('back-to-top-show');
         } else {
-            backToTop.classList.remove('show');
+            backToTop.classList.remove('back-to-top-show');
         }
     })
 
