@@ -2,30 +2,31 @@
 layout: default
 ---
 
-<div class="page clearfix" index>
+<div class="page" index>
     <div class="container">
         <ul>
             {% for post in paginator.posts %}
-              <li>
-                <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              <li class="article-item">
+                <h2 class="article-link">
+                  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>{{ post.date | date: "%F" }}
+                        <i class="label-date"></i>{{ post.date | date: "%F" }}
                     </div>
 
                     <div class="label-card">
                     {% include category.html %}
                     </div>
                 </div>
-                <div class="excerpt">
-                    {{post.excerpt}}
+                <div class="article-desc">
+                    <div class="excerpt">
+                        {{post.excerpt}}
+                    </div>
+                    <div class="read-all">
+                        <a  href="{{ post.url | prepend: site.baseurl }}"><i class="label-readall"></i>Read All</a>
+                    </div>
                 </div>
-                <div class="read-all">
-                    <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
               </li>
             {% endfor %}
         </ul>
@@ -51,40 +52,27 @@ layout: default
         </div>
     </div>
     <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
-    <div class="right">
-        <div class="wrap">
-            <div class="side">
-                <div>
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    Recent Posts
-                </div>
-                <ul class="content-ul" recent>
-                    {% for post in site.posts offset: 0 limit: 10  %}
-                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
 
-            <!-- Content -->
-            <div class="side ">
-                <div>
-                    <i class="fa fa-th-list"></i>
-                    Categories
-                </div>
-                <ul class="content-ul" cate>
-                    {% for category in site.categories order:ascending %}
-                    <li>
-                        <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
-                            <span class="name">
-                                {{ category | first }}
-                            </span>
-                            <span class="badge">{{ category | last | size }}</span>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+    <!-- recent posts-->
+    <dl class="list recent-ul" recent>
+        <dt><i class=""></i>Recent Posts</dt>
+        {% for post in site.posts offset: 0 limit: 10  %}
+            <dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
+        {% endfor %}
+    </dl>
 
-        </div>
-    </div>
+    <!-- Content -->
+    <dl class="list category-ul" cate>
+        <dt><i class=""></i>Categories</dt>
+        {% for category in site.categories order:ascending %}
+        <dd>
+            <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-ddst-item" cate="{{ category | first }}">
+                <span class="name">
+                    {{ category | first }}
+                </span>
+                <span class="badge">{{ category | last | size }}</span>
+            </a>
+        </dd>
+        {% endfor %}
+    </dl>
 </div>

@@ -1,4 +1,16 @@
 background: #1c1c1c;
-tiffiny-color: #6ECBC0;
+tiffiny-color:#6ECBC0;
 yellow-color:#ECB926;
 container-width:800px;
+red-color:#f85455;
+dot-line:rgba(0,0,0,.1)
+transition: .4s ease
+index-p-color:#505050;
+
+.sashimi dt, .sashimi dd, .sashimi a { background: #73C8A9; }
+.nigiri dt, .nigiri dd, .nigiri a { background: #E32551; }
+.maki dt, .maki dd, .maki a { background: #FFC219; }
+
+.sashimi a:hover { background: #61c19e; }
+.nigiri a:hover { background: #d31b46; }
+.maki a:hover { background: #ffbb00; }

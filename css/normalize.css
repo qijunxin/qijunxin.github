@@ -10,7 +10,10 @@ html {
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
-
+*{
+  padding: 0;
+  margin: 0;
+}
 /**
  * Remove the margin in all browsers (opinionated).
  */
@@ -18,12 +21,7 @@ html {
 body {
   margin: 0;
 }
-/**
- * Remove default style in list 
- */
-ul,ol,li {
-  list-style: none;
-}
+
 /* HTML5 display definitions
    ========================================================================== */
 
@@ -48,6 +46,9 @@ summary { /* 1 */
   display: block;
 }
 
+p{
+
+}
 /**
  * Add the correct display in IE 9-.
  */
@@ -208,7 +209,7 @@ sup {
 
 img {
   border-style: none;
-  display: block;
+  display: inline-block;
 }
 
 /**

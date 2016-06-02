@@ -17,6 +17,7 @@
     <link rel="stylesheet" href=" /css/footer.css ">
     <link rel="stylesheet" href=" /css/main.css ">
     <link rel="stylesheet" href=" /css/backToTop.css ">
+    <link rel="stylesheet" href=" /css/makisu.css ">
 
 
     <script>
@@ -30,18 +31,6 @@
     })();
     </script>
 
-
-    <script>
-    // google analytics
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-72449510-4', 'auto');
-      ga('send', 'pageview');
-
-    </script>
 
 </head>
 
@@ -64,6 +53,74 @@
 
                 
                     
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/collection/">
+                        
+                            Collections
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/demo/">
+                        
+                            Demo
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            About
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
                 
             </ul>
         </nav>
@@ -71,17 +128,169 @@
 </header>
 
 
-        <div class="page clearfix" index>
+        <div class="page" index>
     <div class="container">
         <ul>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/05/22/CSS-object-fit-object-position/">使用CSS的 object-fit 和object-position属性</a>
+              <li class="article-item">
+                <h2 class="article-link">
+                  <a href="/2016/05/06/regular-expression-group/">浅谈正则表达式中的分组和引用</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-05-22
+                        <i class="label-date"></i>2016-05-06
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#JavaScript" title="Category: JavaScript" rel="category">JavaScript</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+                </div>
+                <div class="article-desc">
+                    <div class="excerpt">
+                        <ul id="markdown-toc">
+  <li><a href="#section" id="markdown-toc-section">问题</a></li>
+</ul>
+
+<p>由正则表达式如何匹配相同字符出发，讲讲正则表达式中的选择、分组和引用。</p>
+
+<h2 id="section">问题</h2>
+
+<p>在外刊君读者群中看到有人提出这样的一个需求：</p>
+
+<blockquote>
+  <p>把字符串切成连续相同字符的正则怎么写？比如<code class="highlighter-rouge">abbcccdddd</code>切成<code class="highlighter-rouge">a,bb,ccc,dddd</code></p>
+</blockquote>
+
+<p>之前我对正则表达式也是略有研究，想尝试一下。其实我对正则表达式的学习基本完全来源于犀牛书的第10章，真正看懂这一章，我觉得操作正则表达式应该不在话下。</p>
+
+
+                    </div>
+                    <div class="read-all">
+                        <a  href="/2016/05/06/regular-expression-group/"><i class="label-readall"></i>Read All</a>
+                    </div>
+                </div>
+              </li>
+            
+              <li class="article-item">
+                <h2 class="article-link">
+                  <a href="/2016/03/12/jekyll-theme-version-2.0/">对这个 jekyll 博客主题的改版和重构</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="label-date"></i>2016-03-12
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#jekyll" title="Category: jekyll" rel="category">jekyll</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+                </div>
+                <div class="article-desc">
+                    <div class="excerpt">
+                        
+<p>本文主要说明对这个博客主题的改版和代码重构的过程。这个简洁高雅的博客主题受到了很多朋友的喜欢。在写第一版界面时，我对前端并不是很熟悉，对<code class="highlighter-rouge">Jekyll</code>也不熟悉。现在距离当时也一年了，对自己当时写的代码也不太满意了，同时<code class="highlighter-rouge">Jekyll</code>如今也已经升级了，目前最新版为3.1.2。因此我在临近毕业尚未入职前做一下博客主题的代码重构和改版吧。</p>
+
+<p>主要想做这些事情有：添加归档，添加标签，添加分类页面，主页显示文章摘要，代码去除 jQuery 和 BootStrap，优化移动端显示，将所有变量写入配置文件<code class="highlighter-rouge">_config.yml</code>中等。再优化一些细节吧。希望更多人会喜欢。</p>
+
+
+                    </div>
+                    <div class="read-all">
+                        <a  href="/2016/03/12/jekyll-theme-version-2.0/"><i class="label-readall"></i>Read All</a>
+                    </div>
+                </div>
+              </li>
+            
+              <li class="article-item">
+                <h2 class="article-link">
+                  <a href="/2016/01/01/History-API/">前端处理动态 url 和 pushStatus 的使用</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="label-date"></i>2016-01-01
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#JavaScript" title="Category: JavaScript" rel="category">JavaScript</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+                </div>
+                <div class="article-desc">
+                    <div class="excerpt">
+                        <ul id="markdown-toc">
+  <li><a href="#section" id="markdown-toc-section">起因</a></li>
+</ul>
+
+<h2 id="section">起因</h2>
+
+<p>起因是这样的，在尝试前后端分离的这条道路上，我自己也在不断摸索，感觉要把大部分的坑都踩踩了。目前我用的技术是：</p>
+
+<ul>
+  <li>webpack 自动构建</li>
+  <li>AMD 模块化 js</li>
+  <li>Sass 预处理 CSS</li>
+  <li>使用前端模板引擎 handlebars 解决动态操作将 html 拼接在 js 中的问题</li>
+</ul>
+
+<p>但最近写了一个项目类似知乎这样的多页网站。前端 url 的处理让我觉得不够优雅。我使用的是 hash 的方式处理动态 url 的，为此我专门在知乎上提了一个问题：<a href="https://www.zhihu.com/question/38802932">前端如何处理动态url？</a></p>
+
+
+                    </div>
+                    <div class="read-all">
+                        <a  href="/2016/01/01/History-API/"><i class="label-readall"></i>Read All</a>
+                    </div>
+                </div>
+              </li>
+            
+              <li class="article-item">
+                <h2 class="article-link">
+                  <a href="/2015/07/24/low-IE-click-empty-block-bug/">在低版本 IE 中点击空 block 元素的问题</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="label-date"></i>2015-07-24
                     </div>
 
                     <div class="label-card">
@@ -103,169 +312,62 @@
 
                     </div>
                 </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#object-fit--object-position" id="markdown-toc-object-fit--object-position">为什么使用 <code class="highlighter-rouge">object-fit</code> 和 <code class="highlighter-rouge">object-position</code>?</a></li>
-  <li><a href="#object-fit-" id="markdown-toc-object-fit-"><code class="highlighter-rouge">object-fit</code> 属性</a>    <ul>
-      <li><a href="#codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-fillhttpcodepeniositepointpenbkbgzz" id="markdown-toc-codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-fillhttpcodepeniositepointpenbkbgzz">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/BKbGZz/">Object Fit: Fill</a>。</a></li>
-      <li><a href="#codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-containhttpcodepeniositepointpenzqbmzl" id="markdown-toc-codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-containhttpcodepeniositepointpenzqbmzl">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/zqbMzL/">Object Fit: Contain</a>。</a></li>
-      <li><a href="#codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-coverhttpcodepeniositepointpengzewvj" id="markdown-toc-codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-coverhttpcodepeniositepointpengzewvj">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/GZewvJ/">Object Fit: Cover</a>。</a></li>
-      <li><a href="#codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-nonehttpcodepeniositepointpenyowqop" id="markdown-toc-codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-nonehttpcodepeniositepointpenyowqop">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/yOwQoP/">Object Fit: None</a>。</a></li>
-      <li><a href="#codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-scale-downhttpcodepeniositepointpenanmqyr" id="markdown-toc-codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-scale-downhttpcodepeniositepointpenanmqyr">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/aNMQyR/">Object Fit: scale-down</a>。</a></li>
-    </ul>
-  </li>
-  <li><a href="#object-position" id="markdown-toc-object-position"><code class="highlighter-rouge">object-position</code>属性</a>    <ul>
-      <li><a href="#codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-gzewmjhttpcodepeniositepointpengzewmj" id="markdown-toc-codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-gzewmjhttpcodepeniositepointpengzewmj">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/GZewMJ/">GZewMJ</a>。</a></li>
-      <li><a href="#codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-animating-the-object-position-propertyhttpcodepeniositepointpenmyxzer" id="markdown-toc-codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-animating-the-object-position-propertyhttpcodepeniositepointpenmyxzer">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/MyxzEr/">Animating the object-position Property</a>。</a></li>
-    </ul>
-  </li>
-  <li><a href="#section" id="markdown-toc-section">跨浏览器支持和兼容性</a></li>
-  <li><a href="#section-1" id="markdown-toc-section-1">结论</a></li>
+                <div class="article-desc">
+                    <div class="excerpt">
+                        <ul id="markdown-toc">
+  <li><a href="#section" id="markdown-toc-section">问题描述</a></li>
 </ul>
 
-<p>原文作者<a href="https://www.sitepoint.com/author/alaxmi/">Asha Laxmi</a>在文章<a href="https://www.sitepoint.com/using-css-object-fit-object-position-properties/">Using CSS’s object-fit and object-position Properties</a>中介绍了两个CSS属性：<code class="highlighter-rouge">object-fit</code>和<code class="highlighter-rouge">object-position</code>，有助于我们解决images和videos这类可置换元素在布局时遇到的尺寸和宽高比问题。在原来的工作中我也遇到过这种情况，如果图像作为内容出现，考虑到前端倡导的内容和样式分离，那么把图片设置成一个div的背景是不合适的。看了这篇文章才知道，利用<code class="highlighter-rouge">object-fit</code>和<code class="highlighter-rouge">object-position</code>为<code class="highlighter-rouge">img</code>标签书写css样式，可以起到类似于<code class="highlighter-rouge">background-size</code>和<code class="highlighter-rouge">background-position</code>的作用，很好地解决了这个问题。翻译出来和大家共享。</p>
+<h2 id="section">问题描述</h2>
 
-<hr />
-<p>以下是正文：</p>
+<p>当我们点击一个空的、没有任何内容的 div 或者其他块级元素时。在 IE11 以下，是没有反应的。</p>
 
-<p>在给一个网站布局时，视频和图像很容易出现问题。</p>
 
-<p>假设你在CSS里明确指定了一个图像的宽度。如果这个宽度是使用百分比或者视口单位（viewport units）指定的，同时图像的宽度设置成了<code class="highlighter-rouge">auto</code>，那么调整浏览器窗口的时候图像的宽高比不变。</p>
-
-<p>然而有时候，可能你可用的空间有限，需要限制图像的高度。这种情况下调整浏览器窗口肯定会破坏图像的宽高比。</p>
-
-<p>很多关于图像尺寸和宽高比的问题，包括我刚才提到的，可以使用CSS的 <a href="https://www.w3.org/TR/css3-images/#object-fit">object-fit</a> 和 <a href="https://www.w3.org/TR/css3-images/#object-position">object-position</a> 属性来解决。</p>
-
-<p>这两个属性和我们熟悉的<code class="highlighter-rouge">background-size</code>和<code class="highlighter-rouge">background-position</code>属性比较类似。所以，即使你从没听说过，理解起来也不会很困难。</p>
-
-<p>这两个属性都对可置换元素（replaced elements）起作用。然而，为了简洁起见，在这篇文章中，我们用images举例说明。</p>
-
-<h2 id="object-fit--object-position">为什么使用 <code class="highlighter-rouge">object-fit</code> 和 <code class="highlighter-rouge">object-position</code>?</h2>
-
-<p>你可能想知道明明可以使用<code class="highlighter-rouge">background-size</code> 和 <code class="highlighter-rouge">background-position</code>，为什么还要用这两个属性。事实上,至少有两个很好的理由。</p>
-
-<p>首先，考虑这样一个场景，你有一张图片，它是一篇文章的一部分。如果图片的尺寸像之前描述的那样进行设置，调整浏览器窗口将会破坏它的宽高比。这种情况下，仅使用一个<code class="highlighter-rouge">img</code>标签是不够的，你需要使用一个带有<code class="highlighter-rouge">background-size</code> 和 <code class="highlighter-rouge">background-position</code>属性的div。</p>
-
-<p>这种解决方案的问题就是你必须始终保证内容和表现分离，而background属性用于表现的。当你的图像实际上是内容的一部分时，使用<code class="highlighter-rouge">object-fit</code>和<code class="highlighter-rouge">object-position</code>以及<code class="highlighter-rouge">img</code>标签来实现相同的结果会更有意义。</p>
-
-<p>另外一个理由是background属性不能应用于videos，但是<code class="highlighter-rouge">object-fit</code>和<code class="highlighter-rouge">object-position</code>可以。因此，当显示视频的时候，<code class="highlighter-rouge">object-fit</code>和<code class="highlighter-rouge">object-position</code>是你唯一的选择。</p>
-
-<h2 id="object-fit-"><code class="highlighter-rouge">object-fit</code> 属性</h2>
-
-<p>这个属性决定了像images和videos这样的可替换内容占据其content box空间的方式。它有5个可能的值：</p>
-
-<ul>
-  <li>
-    <p><code class="highlighter-rouge">fill</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">contain</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">cover</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">none</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">scale-down</code></p>
-  </li>
-</ul>
-
-<p>使用这个属性的语法如下：</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>.fit-image {
-  object-fit: fill|contain|cover|none|scale-down;
-}
-</code></pre>
-</div>
-
-<p>当设置成<code class="highlighter-rouge">fill</code>时，图像的大小会正好填满content box。这种情况下的图片高度等于content box本身的高度。这也是<code class="highlighter-rouge">object-fit</code>属性的初始值。</p>
-
-<h5 id="codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-fillhttpcodepeniositepointpenbkbgzz">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/BKbGZz/">Object Fit: Fill</a>。</h5>
-
-<p><code class="highlighter-rouge">contain</code>重设图像的尺寸，在保持宽高比的情况下使其填充到content box中。这有两个目的，既避免了图像失真，又能保证图像在content box里。如果图片不能完全覆盖content box，背景色会填满剩余的空间。</p>
-
-<h5 id="codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-containhttpcodepeniositepointpenzqbmzl">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/zqbMzL/">Object Fit: Contain</a>。</h5>
-
-<p><code class="highlighter-rouge">contain</code>适用的场景是，当你不知道图像的尺寸却仍想把它放到一个已知宽度的容器内时。</p>
-
-<p>如果你想要在保证宽高比的情况下让图像完全填满它的content box，你应该用 <code class="highlighter-rouge">cover</code>属性。这种情况下，图片会缩放到较短边恰好适合containing box。溢出盒子的图像部分会被裁掉。</p>
-
-<h5 id="codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-coverhttpcodepeniositepointpengzewvj">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/GZewvJ/">Object Fit: Cover</a>。</h5>
-
-<p>要使用图像本身的尺寸显示，忽略containing box设置的宽高值，你可以使用<code class="highlighter-rouge">none</code>。这种情况下的图像不会被重新设置大小。然而，如果图像的任何部分超出了它的containing box就会被裁掉。</p>
-
-<h5 id="codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-nonehttpcodepeniositepointpenyowqop">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/yOwQoP/">Object Fit: None</a>。</h5>
-
-<p><code class="highlighter-rouge">object-fit</code>属性的最后一个值是<code class="highlighter-rouge">scale-down</code>。顾名思义，即按比例缩小图像，就像被设置成<code class="highlighter-rouge">none</code>或者<code class="highlighter-rouge">contain</code>，得到一个较小的图像。换句话说，如果我们图像的尺寸都小于其各自的containing box的尺寸，那么就会设置成<code class="highlighter-rouge">none</code>。</p>
-
-<h5 id="codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-object-fit-scale-downhttpcodepeniositepointpenanmqyr">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/aNMQyR/">Object Fit: scale-down</a>。</h5>
-
-<h2 id="object-position"><code class="highlighter-rouge">object-position</code>属性</h2>
-
-<p>正如前面看到的，<code class="highlighter-rouge">cover</code>属性会填满containing box的所有空间，并保持图像原有的宽高比。图像也会默认居中显示。这适用于聚焦点在中心的情况。但是，如果图像的聚焦点不在中心怎么办？</p>
-
-<p><code class="highlighter-rouge">object-position</code>属性便可以帮上忙。它的工作原理就像<code class="highlighter-rouge">background-position</code>。下面的代码段将图像的位置设成了左上角：</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>.zero-zero {
-  object-position: 0px 0px;
-}
-</code></pre>
-</div>
-
-<p>定义时可以用像素，也可以用百分比。例如，<code class="highlighter-rouge">object-position: 0% 0%</code>是左上角，<code class="highlighter-rouge">object-position: 100% 100%</code>是右下角。当你不知道图像的尺寸时，这样写很方便。</p>
-
-<p>当图像的宽高比和containing box的宽高比很接近时，设置<code class="highlighter-rouge">object-position</code>似乎不会产生多大影响。然而，当宽高比差别很显著时，结果就会变得明显。下面的CodePen demo说明了我的观点。</p>
-
-<h5 id="codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-gzewmjhttpcodepeniositepointpengzewmj">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/GZewMJ/">GZewMJ</a>。</h5>
-
-<p>在第二个例子中设置位置为左上角，可以聚焦到太阳上。</p>
-
-<p>值得一提的是，<code class="highlighter-rouge">object-position</code>属性是可写入动画的，运用得当的话可以产生惊人的效果。考虑下面的代码：</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>img {
-  /* other CSS here... */
-  object-fit: cover;
-  object-position: 0% 0%;
-  animation: ltr 5s alternate infinite;
-}  
-
-@keyframes ltr {
-  0% {
-    object-position: 0% 0%;
-  }
-  25% {
-    object-position: 20% 0%;
-  }
-  100% {
-    object-position: 100% 100%;
-  }
-}
-</code></pre>
-</div>
-
-<p>这段代码里，我使用keyframe为图像位置做动画，如你所见，最终结果看起来很棒。</p>
-
-<h5 id="codepenhttpcodepeniositepoint-sitepointhttpcodepeniositepoint-animating-the-object-position-propertyhttpcodepeniositepointpenmyxzer">在<a href="http://codepen.io">CodePen</a>上查看SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) 的笔记<a href="http://codepen.io/SitePoint/pen/MyxzEr/">Animating the object-position Property</a>。</h5>
-
-<p>这也可以应用到videos中，当焦点从一个人移到另一个人上时。</p>
-
-<h2 id="section">跨浏览器支持和兼容性</h2>
-
-<p>尽管这些属性经证明是非常有用的，但你是否能真正使用它们取决于<a href="http://caniuse.com/#feat=object-fit">你的浏览器是否支持</a>。<code class="highlighter-rouge">object-fit</code>可以被除了IE/Edge以外的所有主流浏览器支持，<code class="highlighter-rouge">object-position</code>可以被除了IE/Edge和Safari以外的所有主流浏览器支持。</p>
-
-<p>一般来说，你可能恰好需要<code class="highlighter-rouge">object-fit</code>属性。如果你愿意牺牲一部分人的用户体验，那么你可以应用这个属性。如果你需要兼容旧的浏览器，可以试一试<a href="https://github.com/bfred-it/object-fit-images">the polyfill by Federico Brigante</a>。</p>
-
-<h2 id="section-1">结论</h2>
-
-<p>希望你们喜欢这篇教程和附带的演示。如果我遗漏了什么或者你想要补充些什么，可以给我留言。</p>
-
+                    </div>
+                    <div class="read-all">
+                        <a  href="/2015/07/24/low-IE-click-empty-block-bug/"><i class="label-readall"></i>Read All</a>
+                    </div>
                 </div>
-                <div class="read-all">
-                    <a  href="/2016/05/22/CSS-object-fit-object-position/"><i class="fa fa-newspaper-o"></i>Read All</a>
+              </li>
+            
+              <li class="article-item">
+                <h2 class="article-link">
+                  <a href="/2015/07/09/JavaScript-Net/">JavaScript 阶段总结</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="label-date"></i>2015-07-09
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#JavaScript" title="Category: JavaScript" rel="category">JavaScript</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
                 </div>
-                <hr>
+                <div class="article-desc">
+                    <div class="excerpt">
+                        <p>做了一张思维导图。总结这几个月对 JavaScript 的学习吧，也是一个复习。也是我目前的技能树。</p>
+
+
+                    </div>
+                    <div class="read-all">
+                        <a  href="/2015/07/09/JavaScript-Net/"><i class="label-readall"></i>Read All</a>
+                    </div>
+                </div>
               </li>
             
         </ul>
@@ -277,50 +379,127 @@
             <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
             <span class="previous disable"><i class="fa fa-angle-left"></i></span>
           
-          <span class="page_number ">1/1</span>
+          <span class="page_number ">1/5</span>
           
-            <span class="next disable"><i class="fa fa-angle-right"></i></span>
-            <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
+            <a href="/page2" class="next"><i class="fa fa-angle-right"></i></a>
+            <a href="/page5" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
     <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
-    <div class="right">
-        <div class="wrap">
-            <div class="side">
-                <div>
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    Recent Posts
-                </div>
-                <ul class="content-ul" recent>
-                    
-                        <li><a href="/2016/05/22/CSS-object-fit-object-position/">使用CSS的 object-fit 和object-position属性</a></li>
-                    
-                </ul>
-            </div>
 
-            <!-- Content -->
-            <div class="side ">
-                <div>
-                    <i class="fa fa-th-list"></i>
-                    Categories
-                </div>
-                <ul class="content-ul" cate>
-                    
-                    <li>
-                        <a href="/category/#CSS" class="categories-list-item" cate="CSS">
-                            <span class="name">
-                                CSS
-                            </span>
-                            <span class="badge">1</span>
-                        </a>
-                    </li>
-                    
-                </ul>
-            </div>
+    <!-- recent posts-->
+    <dl class="list recent-ul" recent>
+        <dt><i class=""></i>Recent Posts</dt>
+        
+            <dd><a href="/2016/05/06/regular-expression-group/">浅谈正则表达式中的分组和引用</a></dd>
+        
+            <dd><a href="/2016/03/12/jekyll-theme-version-2.0/">对这个 jekyll 博客主题的改版和重构</a></dd>
+        
+            <dd><a href="/2016/01/01/History-API/">前端处理动态 url 和 pushStatus 的使用</a></dd>
+        
+            <dd><a href="/2015/07/24/low-IE-click-empty-block-bug/">在低版本 IE 中点击空 block 元素的问题</a></dd>
+        
+            <dd><a href="/2015/07/09/JavaScript-Net/">JavaScript 阶段总结</a></dd>
+        
+            <dd><a href="/2015/06/18/weinre/">Weinre --WebApp 调试工具</a></dd>
+        
+            <dd><a href="/2015/06/17/web-app/">Web App 相关技术</a></dd>
+        
+            <dd><a href="/2015/06/15/JavaScript-Object-Oriented/">JavaScript 面向对象</a></dd>
+        
+            <dd><a href="/2015/06/14/JavaScript-closure/">JavaScript 中的闭包</a></dd>
+        
+            <dd><a href="/2015/06/12/JavaScript-this/">JavaScript 中的 this</a></dd>
+        
+    </dl>
 
-        </div>
-    </div>
+    <!-- Content -->
+    <dl class="list category-ul" cate>
+        <dt><i class=""></i>Categories</dt>
+        
+        <dd>
+            <a href="/category/#jekyll" class="categories-ddst-item" cate="jekyll">
+                <span class="name">
+                    jekyll
+                </span>
+                <span class="badge">3</span>
+            </a>
+        </dd>
+        
+        <dd>
+            <a href="/category/#Bootstrap" class="categories-ddst-item" cate="Bootstrap">
+                <span class="name">
+                    Bootstrap
+                </span>
+                <span class="badge">1</span>
+            </a>
+        </dd>
+        
+        <dd>
+            <a href="/category/#Sublime" class="categories-ddst-item" cate="Sublime">
+                <span class="name">
+                    Sublime
+                </span>
+                <span class="badge">1</span>
+            </a>
+        </dd>
+        
+        <dd>
+            <a href="/category/#JavaScript" class="categories-ddst-item" cate="JavaScript">
+                <span class="name">
+                    JavaScript
+                </span>
+                <span class="badge">12</span>
+            </a>
+        </dd>
+        
+        <dd>
+            <a href="/category/#GitHub" class="categories-ddst-item" cate="GitHub">
+                <span class="name">
+                    GitHub
+                </span>
+                <span class="badge">1</span>
+            </a>
+        </dd>
+        
+        <dd>
+            <a href="/category/#HTML" class="categories-ddst-item" cate="HTML">
+                <span class="name">
+                    HTML
+                </span>
+                <span class="badge">1</span>
+            </a>
+        </dd>
+        
+        <dd>
+            <a href="/category/#CSS" class="categories-ddst-item" cate="CSS">
+                <span class="name">
+                    CSS
+                </span>
+                <span class="badge">2</span>
+            </a>
+        </dd>
+        
+        <dd>
+            <a href="/category/#Tools" class="categories-ddst-item" cate="Tools">
+                <span class="name">
+                    Tools
+                </span>
+                <span class="badge">1</span>
+            </a>
+        </dd>
+        
+        <dd>
+            <a href="/category/#Interview" class="categories-ddst-item" cate="Interview">
+                <span class="name">
+                    Interview
+                </span>
+                <span class="badge">1</span>
+            </a>
+        </dd>
+        
+    </dl>
 </div>
 
 
@@ -348,10 +527,10 @@
     <a href="#top" class="scroll"></a>
 </div>
 
-    <script src=" /js/main.js " charset="utf-8"></script>
     <script src=" /js/jquery-2.1.4-min.js " charset="utf-8"></script>
     <script src=" /js/makisu.min.js " charset="utf-8"></script>
     <script src=" /js/scroll.min.js " charset="utf-8"></script>
+    <script src=" /js/main.js " charset="utf-8"></script>
   </body>
 
 </html>

@@ -31,24 +31,40 @@
 
 //////////////////////////back to top////////////////////////////
 (function() {
-    var backToTop = document.querySelector('.back-to-top')
-    var backToTopA = document.querySelector('.back-to-top a')
+    var backToTop = document.querySelector('.back-to-top');
+    var backToTopA = document.querySelector('.back-to-top a');
         // console.log(backToTop);
     window.addEventListener('scroll',function () {
-
-
         // 页面顶部滚进去的距离
-        var scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+        var scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop);
 
         if (scrollTop > 200) {
-            backToTop.classList.add('back-to-top-show')
+            backToTop.classList.add('show');
         } else {
-            backToTop.classList.remove('back-to-top-show')
+            backToTop.classList.remove('show');
         }
     })
 
-    // backToTopA.addEventListener('click',function (e) {
-    //     e.preventDefault()
-    //     window.scrollTo(0,0)
-    // })
+}());
+
+///////////////////////////makisu///////////////////////////////
+(function() {
+    if ( $.fn.makisu.enabled ) {
+        $( '.recent-ul' ).makisu({
+            selector: 'dd',
+            speed: 0.5,
+            speed: 0.6
+        }).makisu('open');
+        $( '.category-ul' ).makisu({
+            selector: 'dd',
+            speed: 0.5,
+            speed: 0.6
+        }).makisu('open');
+        $( '.recent-ul dt' ).on( 'click', function() {
+            $(this).parent().makisu( 'toggle' );
+        });
+        $( '.category-ul dt' ).on( 'click', function() {
+            $(this).parent().makisu( 'toggle' );
+        });
+    }
 }());

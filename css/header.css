@@ -1,15 +1,18 @@
 header {	
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
 	background: #1c1c1c;
+  z-index: 999;
 }
 .header-wrapper {
-	margin: 0 auto;
-	width: 800px;
 	height: 50px;
 	color: #fff;
-	padding: 10px 100px;
+	padding: 10px 50px;
 }
 .header-wrapper .brand {
-	display: inline-block;
+  position: absolute;
 	overflow: hidden;
 	height: 100%;
 	line-height: 52px;
@@ -32,11 +35,30 @@ header {
 .header-wrapper .menu {
 	display: none;
 }
+/* #headerNav {
+  height: 50px;
+  line-height: 50px;
+  float: right;
+  overflow: hidden;
+}
+#headerNav li {
+  float: left;
+  margin: 0 20px;
+} */
 #headerNav {
-	float: right;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  list-style: none;
+}
+#headerNav li {
+  display: inline-block;
+  margin: 0 20px;
 }
 #headerNav a {
 	position: relative;
+  color: #ECB926;
+  text-shadow: 0 0 1px rgba(255,255,255,.9) inset;
 }
 #headerNav a:after {
 	display:block;
@@ -56,8 +78,6 @@ header {
 	width: 100%;
 }
 #headerNav a.active{
-	color: #ECB926;
-	text-shadow: 0 0 1px rgba(255,255,255,.9) inset;
 }
 @-webkit-keyframes swing {
   20% {
