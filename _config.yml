@@ -1,8 +1,8 @@
 # Site settings
-title: 伊一小站
+title: 伊一
 baseurl: "" 
 url: "http://qijunxin.github.io" 
-description: 齐俊鑫个人博客
+description: A FE-DEVELOPER WITH CODING PASSION
 avatar: /img/avatar.jpg
 permalink: /:year/:month/:day/:title/
 

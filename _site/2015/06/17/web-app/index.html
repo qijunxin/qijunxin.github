@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Web App 相关技术</title>
-    <meta name="description" content="齐俊鑫个人博客">
+    <meta name="description" content="A FE-DEVELOPER WITH CODING PASSION">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -37,17 +37,17 @@
 
   <body>
 
-    <header id="top">
+    <header id="top" class="">
     <div class="header-wrapper">
-        <a href="/" class="brand"><img src="/img/avatar.jpg" alt=""><small>伊一小站</small></a>      
-        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
-        <nav id="headerNav">
+        <a href="/" class="brand"><img src="/img/avatar.jpg" alt=""><small>伊一</small><span>A FE-DEVELOPER WITH CODING PASSION</em></a>      
+        <button id="header-menu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="header-nav">
             <ul>
                 <li>
                     
                     <a href="/">
                     
-                        Home
+                        首页
                     </a>
                 </li>
 
@@ -57,7 +57,7 @@
                         
                         <a href="/archive/">
                         
-                            Archives
+                            归档
                         </a>
                     </li>
                     
@@ -67,7 +67,7 @@
                         
                         <a href="/category/">
                         
-                            Categories
+                            分类
                         </a>
                     </li>
                     
@@ -77,7 +77,7 @@
                         
                         <a href="/tag/">
                         
-                            Tags
+                            标签
                         </a>
                     </li>
                     
@@ -87,7 +87,7 @@
                         
                         <a href="/collection/">
                         
-                            Collections
+                            收集
                         </a>
                     </li>
                     
@@ -97,7 +97,7 @@
                         
                         <a href="/demo/">
                         
-                            Demo
+                            项目
                         </a>
                     </li>
                     
@@ -107,7 +107,7 @@
                         
                         <a href="/about/">
                         
-                            About
+                            关于
                         </a>
                     </li>
                     
@@ -310,7 +310,7 @@
   </li>
 </ul>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name =</span><span class="s">"viewport"</span> <span class="na">content =</span><span class="s">"initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name =</span><span class="s">"viewport"</span> <span class="na">content =</span><span class="s">"initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span>
 <span class="c">&lt;!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz --&gt;</span>
 </code></pre>
 </div>
@@ -331,7 +331,7 @@
 
 <p><strong>总结：</strong></p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span> <span class="c">&lt;!-- 使用 HTML5 doctype，不区分大小写 --&gt;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span> <span class="c">&lt;!-- 使用 HTML5 doctype，不区分大小写 --&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-cmn-Hans"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa --&gt;</span>
 <span class="nt">&lt;head&gt;</span>
     <span class="c">&lt;!-- 声明文档使用的字符编码 --&gt;</span>
@@ -584,7 +584,7 @@ $ gem install sass
 
 <p>对于 innerHTML 的方式输出的，我们可以采用如下的方式转码</p>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="cm">/**
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cm">/**
  * 转码 XSS 防护
  * @param  {String} str 用户输入的字符串
  * @return {String}     转码后的字符串
@@ -757,7 +757,7 @@ $ gem install sass
 <p>RequireJS就是为了解决这两个问题而诞生的：</p>
 
 <blockquote>
-  <p>（1）实现js文件的异步加载，避免网页失去响应；
+  <p>（1）实现js文件的异步加载，避免网页失去响应；<br />
 （2）管理模块之间的依赖性，便于代码的编写和维护。</p>
 </blockquote>
 
@@ -775,7 +775,7 @@ $ gem install sass
 <p>CMD（Common Module Definition） 通用模块定义。该规范明确了模块的基本书写格式和基本交互规则。该规范是在国内发展出来的。AMD是依赖关系前置，CMD是按需加载。</p>
 
 <blockquote>
-  <p>AMD 是 RequireJS 在推广过程中对模块定义的规范化产出。
+  <p>AMD 是 RequireJS 在推广过程中对模块定义的规范化产出。<br />
 CMD 是 SeaJS 在推广过程中对模块定义的规范化产出。</p>
 </blockquote>
 
@@ -786,7 +786,7 @@ CMD 是 SeaJS 在推广过程中对模块定义的规范化产出。</p>
 <p>对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。</p>
 
 <blockquote>
-  <p>AMD:提前执行（异步加载：依赖先执行）+延迟执行
+  <p>AMD:提前执行（异步加载：依赖先执行）+延迟执行<br />
 CMD:延迟执行（运行到需加载，根据顺序执行）</p>
 </blockquote>
 
@@ -968,7 +968,7 @@ CMD:延迟执行（运行到需加载，根据顺序执行）</p>
 
 <p>于是最终代码如下：</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">textarea</span><span class="nd">:disabled</span> <span class="p">{</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">textarea</span><span class="nd">:disabled</span> <span class="p">{</span>
     <span class="nl">color</span><span class="p">:</span><span class="m">#000</span><span class="p">;</span>
     <span class="nl">background</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
     <span class="nl">-webkit-text-fill-color</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>

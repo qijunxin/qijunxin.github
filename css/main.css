@@ -16,7 +16,7 @@ p {
     font-size: 15px;
     line-height: 1.5em;
 }
-/*page*/
+/*index page*/
 .page .article-item {
     list-style: none;
     position: relative;
@@ -29,6 +29,11 @@ p {
     background: #fff;
 }
 .page .article-link a{
+    color: #555;
+    font-size: 23px;
+    font-weight: 400;
+}
+.page .article-link a:hover {
     color: #f85455;
 }
 .page .article-link:before {
@@ -48,12 +53,14 @@ p {
     color: #505050;
 }
 .page .label {
-    margin-top: 16px;
+    margin-top: 12px;
     overflow: hidden;
 }
 .page .label .label-card {
     float: left;
     margin-right: 15px;
+    color: #999;
+    font-size: 13px;
 }
 .page .read-all {
     position: absolute;
@@ -75,4 +82,15 @@ p {
     color: #fff;
     -webkit-transform: translate(0, 3px);
     transform: translate(0, 3px);
+}
+/*index pagination*/
+.pagination {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #555;
+}
+.pagination a,
+.pagination span {
+    margin: 0 5px;
+    font-size: 20px;
 }

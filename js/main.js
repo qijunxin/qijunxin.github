@@ -1,7 +1,6 @@
 /**
  * some JavaScript code for this blog theme
  */
-/* jshint asi:true */
 
 /////////////////////////header////////////////////////////
 /**
@@ -53,18 +52,38 @@
         $( '.recent-ul' ).makisu({
             selector: 'dd',
             speed: 0.5,
-            speed: 0.6
+            overlap: 0.6
         }).makisu('open');
         $( '.category-ul' ).makisu({
             selector: 'dd',
             speed: 0.5,
-            speed: 0.6
+            overlap: 0.6
         }).makisu('open');
-        $( '.recent-ul dt' ).on( 'click', function() {
-            $(this).parent().makisu( 'toggle' );
-        });
-        $( '.category-ul dt' ).on( 'click', function() {
-            $(this).parent().makisu( 'toggle' );
+        $( '.recent-ul dt, .category-ul dt' ).on( 'click', function() {
+            var $parent = $(this).parent();
+            var time = 0.5 * (1 - 0.6) * 1000 * $parent.find('dd').length ;
+            if($parent.hasClass('open')){
+                $parent.makisu('close');
+                setTimeout(function(){
+                    $parent.addClass('pull-over');
+                }, time);
+            }else {
+                $parent.removeClass('pull-over');
+                setTimeout(function(){
+                    $parent.makisu('open');
+                }, 400);
+            }
         });
     }
+}());
+
+///////////////////////////header fixed///////////////////////////////
+(function(){
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 286){
+            $('.header-wrapper').addClass('fixed-header');
+        }else {
+            $('.header-wrapper').removeClass('fixed-header');
+        }
+   });
 }());
