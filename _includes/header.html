@@ -1,8 +1,8 @@
-<header id="top">
+<header id="top" class="">
     <div class="header-wrapper">
-        <a href="{{ site.baseurl }}/" class="brand"><img src="{{site.avatar}}" alt=""><small>{{site.title}}</small></a>      
-        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
-        <nav id="headerNav">
+        <a href="{{ site.baseurl }}/" class="brand"><img src="{{site.avatar}}" alt=""><small>{{site.title}}</small><span>{{site.description}}</em></a>      
+        <button id="header-menu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="header-nav">
             <ul>
                 <li>
                     {% if page.url == '/' %}
@@ -10,7 +10,7 @@
                     {% else %}
                     <a href="{{site.baseurl}}/">
                     {% endif %}
-                        Home
+                        首页
                     </a>
                 </li>
 

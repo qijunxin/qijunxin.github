@@ -1,84 +1,106 @@
-header {	
-  position: fixed;
-  top: 0;
-  left:0;
-  right: 0;
-	background: #1c1c1c;
-  z-index: 999;
+header {
+  background: #1c1c1c;
+  z-index: 99;
 }
 .header-wrapper {
-	height: 50px;
-	color: #fff;
-	padding: 10px 50px;
+  position: relative;
+  height: 350px;
+  padding: 10px 50px;
 }
 .header-wrapper .brand {
   position: absolute;
-	overflow: hidden;
-	height: 100%;
-	line-height: 52px;
-	font-size: 20px;	
-}
-.header-wrapper a {
-	color:#ECB926;
+  top: 60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 300px;
 }
 .header-wrapper .brand img {
-	margin-right: 30px;
-	float:left;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
 }
-.header-wrapper .brand img:hover {
-	-webkit-animation: swing 1s;
-	animation: swing 1s;
+.header-wrapper .brand:hover img {
+  -webkit-animation: swing 1s ease-in;
+  animation: swing 1s ease-in;
+}
+.header-wrapper .brand small,
+.header-wrapper .brand span {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+.header-wrapper .brand small {
+  font-weight: 700;
+  color: #dedcdb;
+  font-size: 20px;
+}
+.header-wrapper .brand span{
+  font-weight: 300;
+  color: #ECB926;
+  font-size: 12px;
 }
 .header-wrapper .menu {
-	display: none;
+  display: none;
 }
-/* #headerNav {
-  height: 50px;
-  line-height: 50px;
-  float: right;
-  overflow: hidden;
-}
-#headerNav li {
-  float: left;
-  margin: 0 20px;
-} */
-#headerNav {
-  height: 50px;
-  line-height: 50px;
+.header-wrapper nav {
+  position: absolute;
+  top: 280px;
+  left: 0;
+  right: 0;
+  height: 64px;
+  line-height: 64px;
   text-align: center;
+  background: #1c1c1c;
+
+}
+.header-wrapper.fixed-header nav {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.header-wrapper li{
   list-style: none;
-}
-#headerNav li {
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 15px;
 }
-#headerNav a {
-	position: relative;
+.header-wrapper nav a {
+  color: #dedcdb;
+  font-size: 16px;
+  padding: 5px;
+  text-align: center;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+  position: relative;
+}
+.header-wrapper nav a:after {
+  display:block;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  left: 50%;
+  -webkit-transform: translateX(-45%);;
+  transform: translateX(-45%);
+  content: '';
+  height: 1px;
+  background: #fff;
+  -webkit-transition: width .2s ease-in;
+}
+.header-wrapper nav a:hover {
   color: #ECB926;
-  text-shadow: 0 0 1px rgba(255,255,255,.9) inset;
 }
-#headerNav a:after {
-	display:block;
-	position: absolute;
-	top: 20px;
-	width: 0;
-	left: 50%;
-	-webkit-transform: translateX(-50%);;
-	transform: translateX(-50%);
-	margin: 0 auto;
-	content: '';
-	height: 1px;
-	background: #fff;
-	-webkit-transition: width .2s ease-in;
+.header-wrapper nav a:hover:after {
+  width: 100%;
 }
-#headerNav a:hover:after{
-	width: 100%;
-}
-#headerNav a.active{
-}
+
+
 @-webkit-keyframes swing {
   20% {
     -webkit-transform: rotate3d(0, 0, 1, 20deg);
@@ -107,29 +129,29 @@ header {
 }
 
 @keyframes swing {
-  20% {
-    -webkit-transform: rotate3d(0, 0, 1, 20deg);
-    transform: rotate3d(0, 0, 1, 20deg);
-  }
+20% {
+  -webkit-transform: rotate3d(0, 0, 1, 20deg);
+  transform: rotate3d(0, 0, 1, 20deg);
+}
 
-  40% {
-    -webkit-transform: rotate3d(0, 0, 1, -14deg);
-    transform: rotate3d(0, 0, 1, -14deg);
-  }
+40% {
+  -webkit-transform: rotate3d(0, 0, 1, -14deg);
+  transform: rotate3d(0, 0, 1, -14deg);
+}
 
-  60% {
-    -webkit-transform: rotate3d(0, 0, 1, 5deg);
-    transform: rotate3d(0, 0, 1, 5deg);
-  }
+60% {
+  -webkit-transform: rotate3d(0, 0, 1, 5deg);
+  transform: rotate3d(0, 0, 1, 5deg);
+}
 
-  80% {
-    -webkit-transform: rotate3d(0, 0, 1, -5deg);
-    transform: rotate3d(0, 0, 1, -5deg);
-  }
+80% {
+  -webkit-transform: rotate3d(0, 0, 1, -5deg);
+  transform: rotate3d(0, 0, 1, -5deg);
+}
 
-  to {
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-    transform: rotate3d(0, 0, 1, 0deg);
-  }
+to {
+  -webkit-transform: rotate3d(0, 0, 1, 0deg);
+  transform: rotate3d(0, 0, 1, 0deg);
+}
 }
 
