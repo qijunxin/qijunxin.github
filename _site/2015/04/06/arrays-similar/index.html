@@ -118,10 +118,6 @@
                 
                     
                 
-                    
-                
-                    
-                
             </ul>
         </nav>
     </div>
@@ -183,7 +179,7 @@
 
 <p>题目给出了 index.html 如下：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=gb18030"</span><span class="nt">&gt;</span>
@@ -209,7 +205,7 @@
 
 <p>其中 testData.js 是测试用例，代码如下</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">//以下为多组测试数据</span>
     <span class="kd">var</span> <span class="nx">cases</span> <span class="o">=</span> <span class="p">[{</span>
         <span class="na">arr1</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">null</span><span class="p">],</span>
@@ -288,8 +284,8 @@
 
 <h3 id="section-2">思路</h3>
 
-<p>通过观察测试用例，可以发现，最后三个用例有不是数组的。所以我们可以先判断传入的参数是否是数组。   <br />
-又因为题目中要求数组长度必须一致，这也是第二个限制条件。   <br />
+<p>通过观察测试用例，可以发现，最后三个用例有不是数组的。所以我们可以先判断传入的参数是否是数组。 <br />
+又因为题目中要求数组长度必须一致，这也是第二个限制条件。 <br />
 最后再区分具体的类型。</p>
 
 <p>理清思路我们可以分为以下步骤：</p>
@@ -306,7 +302,7 @@
 
 <p>JavaScript代码如下</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cm">/**
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="cm">/**
  * =====================================================
  * 请在index.html文件中，编写arraysSimilar函数，实现判断传入的两个数组是否相似。具体需求：
  * 1. 数组中的成员类型相同，顺序可以不同。例如[1, true] 与 [false, 2]是相似的。

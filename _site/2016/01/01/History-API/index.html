@@ -118,10 +118,6 @@
                 
                     
                 
-                    
-                
-                    
-                
             </ul>
         </nav>
     </div>
@@ -184,14 +180,14 @@
 <p>这里我将问题描述如下：</p>
 
 <blockquote>
-  <p>前后端彻底分离的情况下，页面跳转页全部由前端控制。那么如何更好的处理动态url地址？<br />
-例如本问题的url为<br />
-https://www.zhihu.com/question/38802932<br />
+  <p>前后端彻底分离的情况下，页面跳转页全部由前端控制。那么如何更好的处理动态url地址？
+例如本问题的url为
+https://www.zhihu.com/question/38802932
 这肯定是用后台路由处理的url</p>
 
-  <p>纯前端怎么处理？用hash吗，如下:<br />
-https://www.zhihu.com/question#38802932<br />
-那如果本页跳转，只改变hash的话，页面不会刷新。<br />
+  <p>纯前端怎么处理？用hash吗，如下:
+https://www.zhihu.com/question#38802932
+那如果本页跳转，只改变hash的话，页面不会刷新。
 使用<code class="highlighter-rouge">location.reload()</code>倒是可以解决。</p>
 
   <p><strong>但总觉得这样处理不够优雅。大家在工作中是如何处理此类场景的？还是用传统的后台路由来提供动态url？</strong></p>
@@ -256,7 +252,7 @@ https://www.zhihu.com/question#38802932<br />
   </li>
 </ul>
 
-<p>本节在线demo见：<a href="http://gaohaoyang.github.io/history-pjax-demo/">History &amp; pjax demo</a> 源代码：[]()</p>
+<p>本节在线demo见：<a href="http://gaohaoyang.github.io/history-pjax-demo/">History &amp; pjax demo</a> 源代码：<a href=""></a></p>
 
 <p><strong>经过亲自测试，<code class="highlighter-rouge">history</code>对象只记录同一个 tab 页内的历史。如果是在新窗口打开的，则无效。如：在a标签中添加<code class="highlighter-rouge">target="_blank"</code>，或按住<code class="highlighter-rouge">ctrl</code>点击，这类场景下，在新的tab页中，<code class="highlighter-rouge">history</code>对象也是新的。</strong></p>
 

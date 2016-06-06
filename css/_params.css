@@ -1,8 +1,8 @@
 background: #1c1c1c;
-tiffiny-color:#6ECBC0;
+tiffiny-color:#6ECBC0;    rgba(130,210,210,.7);
 yellow-color:#ECB926;
 container-width:800px;
-red-color:#f85455;
+red-color:#f85455;    rgba(220,78,79,.7)
 dot-line:rgba(0,0,0,.1)
 transition: .4s ease
 index-p-color:#505050;
