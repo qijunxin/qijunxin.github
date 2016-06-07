@@ -29,22 +29,20 @@ icon: tags
           {% endfor %}
         {% endfor %}
         </ul>
-
-    </div>
-    <button class="anchor"><i class="fa fa-anchor"></i></button>
-    <aside>
-        <div>
-            Content
-        </div>
+        <aside>
         <ul id="content-side" class="content-ul">
             {% for tag in sortedtags %}
             <li>
                 <a class="scroll" href="#{{ tag }}">
-                    {{ tag }} ({{ site.tags[tag].size }})
+                    {{ tag }} <span>{{ site.tags[tag].size }}</span>
                 </a>
             </li>
             {% endfor %}
 
         </ul>
     </aside>
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    
 </div>

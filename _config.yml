@@ -7,9 +7,9 @@ avatar: /img/avatar.jpg
 permalink: /:year/:month/:day/:title/
 
 # other links
-github_username: qijunxin
+github: https://github.com/qijunxin
 email: 1531211307@qq.com
-weibo_username: qijunxin
+weibo: http://weibo.com/qijunxin
 
 
 # comments

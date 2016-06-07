@@ -1,3 +1,4 @@
+/*文章内容*/
 .post h1,h2,h3,h4,h5,h6 {
     margin: 10px 0;
     font-weight: normal;
@@ -9,7 +10,6 @@
     background: #fff;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,.27) 0 1px 3px;
-    position: relative;
 }
 .post #markdown-toc {
     display: none;
@@ -29,6 +29,9 @@
     background: #fbfbfb;
     padding: 10px 15px;
 }
+.post ul,ol {
+    padding-left: 2em;
+}
 .post img {
     max-width: 100%;
 }
@@ -40,6 +43,8 @@
     border: 1px solid #aaa;
     border-radius: 5px;
 }
+
+/*文章目录*/
 .post aside {
     position: absolute;
     width: 250px;
@@ -53,6 +58,9 @@
 .post aside li {
     list-style: none;
     margin: 5px 0;
+}
+.post aside ul {
+    padding-left: 0;
 }
 .post aside ul ul {
     padding-left: 1em;
