@@ -5,13 +5,13 @@
 	bottom: 60px;
 	height: 50px;
 	width: 50px;
-    border-radius: 50%;
-	background: #f85455 url(../img/arrow_up_normal.png) no-repeat 48% center;
-    -webkit-transition: background .4s ease;
-    transition: background .4s ease;
+	background: url(../img/arrow_up.png) no-repeat center center;
+    -webkit-transition: opacity .4s ease;
+    transition: opacity .4s ease;
+    opacity: .62;
 }
 .back-to-top:hover {
-    background: url(../img/arrow_up.png) no-repeat 48% center;
+    opacity: 1;
 }
 .back-to-top a {
 	display: block;

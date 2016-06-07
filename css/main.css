@@ -2,8 +2,7 @@
 .container {
 	width: 800px;
 	margin: 0 auto;
-    padding-top: 50px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 .container:after {
     visibility: hidden;
@@ -23,7 +22,9 @@ p {
     position: relative;
     margin: 30px 0;
     padding: 20px ;
-    border: 1px solid rgba(0,0,0,.1);
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,.27) 0 1px 3px;
 }
 .page .article-link {
     position: relative;
@@ -97,7 +98,9 @@ p {
 
 /*归档页面*/
 .archive .container,
-.category .container {
+.category .container,
+.tags .container {
+    padding-top: 20px;
     width: 600px;
 }
 .archive h2,
@@ -113,7 +116,8 @@ p {
     font-weight: normal;
     position: relative;
 }
-.archive h2:before{
+.archive h2:before,
+.category h2:before{
     content: '';
     display: block;
     position: absolute;
@@ -211,19 +215,16 @@ p {
 .category aside:hover {
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    background: #1c1c1c;
+    /* background: #1c1c1c; */
 }
-.category aside:hover li {
+/* .category aside:hover li {
     background: #fff;
 }
 .category aside:hover a{
     color: #1c1c1c;
 }
-
+ */
 /*标签页面*/
-.tags .container {
-    width: 600px;
-}
 .tags h2{
     font-size: 18px;
     color: #fff;

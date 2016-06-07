@@ -1,12 +1,10 @@
 ---
-layout: page
+layout: default
 title: 关于
 permalink: /about/
 icon: heart
 ---
 
-* content
-{:toc}
 
 ## Comments
 

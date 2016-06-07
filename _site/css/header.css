@@ -1,15 +1,18 @@
+body {
+  background: #fafafa;
+}
 header {
-  background: #1c1c1c;
   z-index: 99;
+  background: #282828;
 }
 .header-wrapper {
   position: relative;
-  height: 350px;
-  padding: 10px 50px;
+  height: 330px;
+  padding: 0 50px;
 }
 .header-wrapper .brand {
   position: absolute;
-  top: 60px;
+  top: 50px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -52,10 +55,10 @@ header {
   top: 280px;
   left: 0;
   right: 0;
-  height: 64px;
-  line-height: 64px;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
-  background: #1c1c1c;
+  background: #282828;
 
 }
 .header-wrapper.fixed-header nav {
@@ -67,12 +70,17 @@ header {
   list-style: none;
   display: inline-block;
   margin: 0 15px;
+  -webkit-transition: margin .3s ease;
+  transition: margin .3s ease;
+}
+.header-wrapper.fixed-header li {
+  margin: 0 25px;
 }
 .header-wrapper nav a {
   color: #dedcdb;
   font-size: 16px;
-  padding: 5px;
   text-align: center;
+  margin: 0 6px;
   -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
   -ms-transition: all .25s ease;
@@ -80,14 +88,17 @@ header {
   transition: all .25s ease;
   position: relative;
 }
+.header-wrapper nav a.active {
+  color:#ECB926;
+}
 .header-wrapper nav a:after {
   display:block;
   position: absolute;
   bottom: 0;
   width: 0;
   left: 50%;
-  -webkit-transform: translateX(-45%);;
-  transform: translateX(-45%);
+  -webkit-transform: translate(-50%, 5px);
+  transform: translate(-50%, 5px);
   content: '';
   height: 1px;
   background: #fff;

@@ -24,18 +24,17 @@ icon: th-list
                 {% endfor %}
             {% endfor %}
         </ul>
+        <aside>
+            <ul id="content-side" class="content-ul">
+                {% for category in site.categories%}
+                    <li>
+                        <a class="scroll" href="#{{ category | first }}">
+                            {{ category | first }} ({{ category | last | size }})
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </aside>
     </div>
     <button class="anchor"><i class="fa fa-anchor"></i></button>
-    <aside>
-        <ul id="content-side" class="content-ul">
-            {% for category in site.categories%}
-                <li>
-                    <a class="scroll" href="#{{ category | first }}">
-                        {{ category | first }} ({{ category | last | size }})
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </aside>
 </div>
-<script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>

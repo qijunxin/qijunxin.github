@@ -18,6 +18,7 @@
     <link rel="stylesheet" href=" /css/main.css ">
     <link rel="stylesheet" href=" /css/backToTop.css ">
     <link rel="stylesheet" href=" /css/makisu.css ">
+    <link rel="stylesheet" href=" /css/post.css ">
 
 
     <script>
@@ -85,26 +86,6 @@
                     
                     <li>
                         
-                        <a href="/collection/">
-                        
-                            收集
-                        </a>
-                    </li>
-                    
-                
-                    
-                    <li>
-                        
-                        <a href="/demo/">
-                        
-                            项目
-                        </a>
-                    </li>
-                    
-                
-                    
-                    <li>
-                        
                         <a href="/about/">
                         
                             关于
@@ -124,12 +105,12 @@
 </header>
 
 
-        <div class="page clearfix" post>
+        <div class="page clearfix post" >
     <div class="container">
         <h1 class="post-title">Jekyll 搭建静态博客</h1>
         <div class="label">
-            <div class="label-card">
-                <i class="fa fa-calendar"></i>2015-02-16
+            <div class="label-card date">
+                2015-02-16
             </div>
 
             <div class="label-card">
@@ -151,7 +132,6 @@
 
             </div>
         </div>
-        <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
   <li><a href="#section" id="markdown-toc-section">搭建过程</a>    <ul>
@@ -316,7 +296,6 @@ Done installing documentation for hitimes after 1 seconds
 <p>关于，<a href="https://rubygems.org/gems/hitimes/versions/1.2.2">hitimes</a> 是一个快速的高效的定时器解决方案库，详情可以去官网查看。</p>
 
         </article>
-        <hr>
         <h2 id="comments">Comments</h2>
         <div id="disqus_thread"></div>
 <script>
@@ -342,21 +321,19 @@ Done installing documentation for hitimes after 1 seconds
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
+
+        <!-- 文章目录 -->
+        <aside>
+            <div>
+                文章目录
+            </div>
+            <ul id="content-side" class="content-ul">
+                <li><a href="#comments">Comments</a></li>
+            </ul>
+        </aside>
     </div>
     <button class="anchor"><i class="fa fa-anchor"></i></button>
-    <div class="right">
-        <div class="wrap">
-            <!-- 文章目录 -->
-            <div class="side content">
-                <div>
-                    文章目录
-                </div>
-                <ul id="content-side" class="content-ul">
-                    <li><a href="#comments">Comments</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+
 </div>
 <script>
 /**
@@ -369,7 +346,6 @@ Done installing documentation for hitimes after 1 seconds
     }
 }());
 </script>
-<script src="/js/pageContent.js " charset="utf-8"></script>
 
 
     <footer class="site-footer">
