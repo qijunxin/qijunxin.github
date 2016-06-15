@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Three.js学习笔记（一）</title>
+    <meta name="description" content="A FE-DEVELOPER WITH CODING PASSION">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href=" /css/normalize.css ">
+    <link rel="stylesheet" href=" /css/fontawesome/css/font-awesome.min.css ">
+    <link rel="stylesheet" href=" /css/header.css ">
+    <link rel="stylesheet" href=" /css/footer.css ">
+    <link rel="stylesheet" href=" /css/main.css ">
+    <link rel="stylesheet" href=" /css/backToTop.css ">
+    <link rel="stylesheet" href=" /css/makisu.css ">
+    <link rel="stylesheet" href=" /css/post.css ">
+
+
+    <script>
+    // 百度统计代码
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?ee94b48528a1796da91f8c0c193a73f3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+</head>
+
+
+  <body>
+
+    <header id="top" class="">
+    <div class="header-wrapper">
+        <a href="/" class="brand"><img src="/img/avatar.jpg" alt=""><small>伊一</small><span>A FE-DEVELOPER WITH CODING PASSION</em></a>      
+        <button id="header-menu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="header-nav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        首页
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            归档
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            分类
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            标签
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            关于
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix post" >
+    <div class="container">
+        <h1 class="post-title">Three.js学习笔记（一）</h1>
+        <div class="label">
+            <div class="label-card date">
+                2016-06-14
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Three.js" title="Category: Three.js" rel="category">Three.js</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+        </div>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <ul id="markdown-toc">
+  <li><a href="#section" id="markdown-toc-section">前言</a>    <ul>
+      <li><a href="#section-1" id="markdown-toc-section-1">1.创建渲染器</a></li>
+      <li><a href="#section-2" id="markdown-toc-section-2">2.创建场景</a></li>
+      <li><a href="#section-3" id="markdown-toc-section-3">3.添加相机</a></li>
+      <li><a href="#section-4" id="markdown-toc-section-4">4.添加网格</a></li>
+      <li><a href="#section-5" id="markdown-toc-section-5">5.启动动画</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="section">前言</h2>
+<p>最近入手了一本新书《HTML5与WebGL编程》，原生的WebGl实在是太晦涩难懂了，即便是我对动画兴趣很浓，看着看着也会抓狂“看不懂啊”，好在发现了Three.js，这是一款JavaScript3D引擎，隐藏了WebGL渲染中的底层细节。我想在博客里记录下我的Three.js的探索笔记，方便总结，也可与大家分享。</p>
+
+<ul>
+  <li>Three.js支持交互
+ WebGL不支持原生的选中支持，无法获取鼠标经过了当前场景中的那个物体。而Three.js提供了对选中的支持。</li>
+  <li>Three.js支持数学计算
+ 包括3D数学运算对象，如矩阵、映射和向量。</li>
+  <li>Three.js支持第三方文件格式。
+ 以文本、JSON、二进制格式存储的3D模型文件。</li>
+  <li>Three.js面向对象</li>
+  <li>Three.js包含2D Canvas、SVG、CSS的渲染引擎。
+ 在不支持WebGL的浏览器中可以使用2D Canvas和SVG优雅降级。</li>
+</ul>
+
+<p>github上下载的Three.js包解压缩之后docs目录下是帮助手册，examples里面有很多示例项目。学习代码最好的方式就是从实例出发，下面我们从一个小demo开始了解一下Three.js的工作原理。
+一个简单的Three.js程序的创建主要包含以下几个步骤：</p>
+
+<ol>
+  <li>创建渲染器</li>
+  <li>创建场景</li>
+  <li>添加相机</li>
+  <li>添加网格（包括几何图形和材质，纹理）</li>
+  <li>启动动画</li>
+</ol>
+
+<p>下面结合代码来分析：</p>
+
+<h3 id="section-1">1.创建渲染器</h3>
+
+<p>首先确保在html body里加入了一个canvas容器。
+我们可以使用不同的API来渲染相同的场景，Three.js提供了四种渲染器：<strong>CanvasRenderer、WebGLRenderer、WebGLRenderTarget、WebGLRenderTargetCube</strong>，这里我们使用了<strong>WebGLRenderer</strong>来渲染。参数antialias用于告知Three.js开启基于硬件的多重采样抗锯齿的策略。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// 创建Three.js渲染器并将其添加到canvas容器里
+renderer = new Three.WebGLRenderer({canvas:canvas, antialias:true});
+
+// 设置视口尺寸
+renderer.setSize(canvas.width,canvas.height);
+</code></pre>
+</div>
+
+<h3 id="section-2">2.创建场景</h3>
+
+<p>这个场景是Three.js图形层级结构的最顶层，它包含全部的图形对象。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// 创建场景
+scene = new Three.Scene();
+</code></pre>
+</div>
+
+<p>场景创建完毕后，要为场景添加两个对象：<strong>一个相机</strong> 和 <strong>一个网格</strong>。</p>
+
+<h3 id="section-3">3.添加相机</h3>
+
+<p>Three.js里提供三种相机<strong>CubeCamera、OrthographicCamera（正交投影）、PerspectiveCamera（透视投影）</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// 四个参数分别是：45度投影角，宽高比，最近与最远平面的位置坐标值
+camera = new Three.PerspectiveCamera( 45, canvas.width / canvas.height, 1, 1000 );
+
+// 将相机添加到场景中
+scene.add( camera );
+</code></pre>
+</div>
+
+<h3 id="section-4">4.添加网格</h3>
+
+<p>一个网格包括 <strong>一个几何形状</strong> 和 <strong>一个材质</strong>。并且Three.js提供了一个很简单的API可以帮助我们便利的将纹理和材质结合起来。Three.js内置了很多基本图形和纹理，可以自己查看说明文档。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// 创建纹理映射
+var mapUrl = "image/texture.jpg";
+var map = new Three.TextureLoader().load(mapUrl);
+
+// 创建一个基础材质，传入纹理映射参数
+var material = new Three.MeshBasicMaterial({map:map});
+
+// 创建一个几何形状:2x2x2的立方体
+var geometry = new Three.CubeGeometry(2,2,2);
+
+// 将几何形状和材质整合到一个网格中
+cube = new Three.Mesh(geometry,material);
+
+// 添加网格到场景
+scene.add(cube);
+</code></pre>
+</div>
+
+<h3 id="section-5">5.启动动画</h3>
+
+<p>使用requestAnimationFrame（）来实现一个运行循环。这个函数可以依据浏览器的渲染更新动画，不会存在过度绘制的问题，动画不会掉帧，自然流畅。这里的动画是将每次立方体旋转一个角度。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var duration = 5000;
+var currentTime = Date.now();
+function animate() {
+    var now = Date.now();
+    var deltat = now - currentTime ;
+    currentTime = now;
+    var fract = deltat/duration ;
+    var angle = Math.PI * 2 * fract ;
+    cube.rotation.y += angle ;
+}
+function run() {
+    requestAnimationFrame(function(){ run() ; });
+    // 渲染场景
+    renderer.render( scene , camera );
+    // 为下一帧动画更新参数
+    animate();
+} 通过run()启动动画。
+</code></pre>
+</div>
+
+<p>打开浏览器，你的第一个Three.js的demo就可以运行啦！</p>
+
+<p>注意：有的浏览器会报错
+Three.WebGLRenderer: WEBGL_depth_texture extension not supported.
+说明的浏览器不支持WEBGL_depth_texture扩展，那么可以改用CanvasRenderer渲染器。</p>
+
+        </article>
+        <h2 id="comments">Comments</h2>
+        <div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://qijunxin.github.io/2016/06/14/Threejs-1/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://qijunxin.github.io/2016/06/14/Threejs-1/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//qijunxin.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+        <!-- 文章目录 -->
+        <aside>
+            <div>
+                文章目录
+            </div>
+            <ul id="content-side" class="content-ul">
+                <li><a href="#comments">Comments</a></li>
+            </ul>
+        </aside>
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+
+
+    <!-- <footer class="site-footer">
+    <div class="footer-wrapper">   
+        <p class="contact">
+            Contact me at: 
+            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a> 
+            <a href="mailto:1531211307@qq.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> 
+            <a href="http://weibo.com/" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a> 
+        </p>
+        <p>
+            本站总访问量 <span id="busuanzi_value_site_pv"></span> 次，本站访客数 <span id="busuanzi_value_site_uv"></span> 人次，本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+ -->
+    <div class="back-to-top">
+    <a href="#top" class="scroll"></a>
+</div>
+
+    <script src=" /js/jquery-2.1.4-min.js " charset="utf-8"></script>
+    <script src=" /js/makisu.min.js " charset="utf-8"></script>
+    <script src=" /js/scroll.min.js " charset="utf-8"></script>
+    <script src=" /js/main.js " charset="utf-8"></script>
+  </body>
+
+</html>

@@ -95,10 +95,6 @@
                 
                     
                 
-                    
-                
-                    
-                
             </ul>
         </nav>
     </div>
@@ -111,11 +107,11 @@
             
               <li class="article-item">
                 <h2 class="article-link">
-                  <a href="/2016/05/06/regular-expression-group/">浅谈正则表达式中的分组和引用</a>
+                  <a href="/2016/06/14/Threejs-1/">Three.js学习笔记（一）</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="label-date"></i>2016-05-06
+                        <i class="label-date"></i>2016-06-14
                     </div>
 
                     <div class="label-card">
@@ -127,7 +123,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#JavaScript" title="Category: JavaScript" rel="category">JavaScript</a>
+        <a href="/category/#Three.js" title="Category: Three.js" rel="category">Three.js</a>
     
   
 
@@ -139,210 +135,10 @@
                 </div>
                 <div class="article-desc">
                     <div class="excerpt">
-                        <ul id="markdown-toc">
-  <li><a href="#section" id="markdown-toc-section">问题</a></li>
-</ul>
-
-<p>由正则表达式如何匹配相同字符出发，讲讲正则表达式中的选择、分组和引用。</p>
-
-<h2 id="section">问题</h2>
-
-<p>在外刊君读者群中看到有人提出这样的一个需求：</p>
-
-<blockquote>
-  <p>把字符串切成连续相同字符的正则怎么写？比如<code class="highlighter-rouge">abbcccdddd</code>切成<code class="highlighter-rouge">a,bb,ccc,dddd</code></p>
-</blockquote>
-
-<p>之前我对正则表达式也是略有研究，想尝试一下。其实我对正则表达式的学习基本完全来源于犀牛书的第10章，真正看懂这一章，我觉得操作正则表达式应该不在话下。</p>
-
-
+                        最近入手了一本新书《HTML5与WebGL编程》，原生的WebGl实在是太晦涩难懂了，即便是我对动画兴趣很浓，看着看着也会抓狂“看不懂啊”，好在发现了Three.js，这是一款JavaScript3D引擎，隐藏了WebGL渲染中的底层细节。我想在博客里记录下我的Three.js的探索笔记，方便总结，也可与大家分享。
                     </div>
                     <div class="read-all">
-                        <a  href="/2016/05/06/regular-expression-group/"><i class="label-readall"></i>Read All</a>
-                    </div>
-                </div>
-              </li>
-            
-              <li class="article-item">
-                <h2 class="article-link">
-                  <a href="/2016/03/12/jekyll-theme-version-2.0/">对这个 jekyll 博客主题的改版和重构</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="label-date"></i>2016-03-12
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#jekyll" title="Category: jekyll" rel="category">jekyll</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-                </div>
-                <div class="article-desc">
-                    <div class="excerpt">
-                        
-<p>本文主要说明对这个博客主题的改版和代码重构的过程。这个简洁高雅的博客主题受到了很多朋友的喜欢。在写第一版界面时，我对前端并不是很熟悉，对<code class="highlighter-rouge">Jekyll</code>也不熟悉。现在距离当时也一年了，对自己当时写的代码也不太满意了，同时<code class="highlighter-rouge">Jekyll</code>如今也已经升级了，目前最新版为3.1.2。因此我在临近毕业尚未入职前做一下博客主题的代码重构和改版吧。</p>
-
-<p>主要想做这些事情有：添加归档，添加标签，添加分类页面，主页显示文章摘要，代码去除 jQuery 和 BootStrap，优化移动端显示，将所有变量写入配置文件<code class="highlighter-rouge">_config.yml</code>中等。再优化一些细节吧。希望更多人会喜欢。</p>
-
-
-                    </div>
-                    <div class="read-all">
-                        <a  href="/2016/03/12/jekyll-theme-version-2.0/"><i class="label-readall"></i>Read All</a>
-                    </div>
-                </div>
-              </li>
-            
-              <li class="article-item">
-                <h2 class="article-link">
-                  <a href="/2016/01/01/History-API/">前端处理动态 url 和 pushStatus 的使用</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="label-date"></i>2016-01-01
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#JavaScript" title="Category: JavaScript" rel="category">JavaScript</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-                </div>
-                <div class="article-desc">
-                    <div class="excerpt">
-                        <ul id="markdown-toc">
-  <li><a href="#section" id="markdown-toc-section">起因</a></li>
-</ul>
-
-<h2 id="section">起因</h2>
-
-<p>起因是这样的，在尝试前后端分离的这条道路上，我自己也在不断摸索，感觉要把大部分的坑都踩踩了。目前我用的技术是：</p>
-
-<ul>
-  <li>webpack 自动构建</li>
-  <li>AMD 模块化 js</li>
-  <li>Sass 预处理 CSS</li>
-  <li>使用前端模板引擎 handlebars 解决动态操作将 html 拼接在 js 中的问题</li>
-</ul>
-
-<p>但最近写了一个项目类似知乎这样的多页网站。前端 url 的处理让我觉得不够优雅。我使用的是 hash 的方式处理动态 url 的，为此我专门在知乎上提了一个问题：<a href="https://www.zhihu.com/question/38802932">前端如何处理动态url？</a></p>
-
-
-                    </div>
-                    <div class="read-all">
-                        <a  href="/2016/01/01/History-API/"><i class="label-readall"></i>Read All</a>
-                    </div>
-                </div>
-              </li>
-            
-              <li class="article-item">
-                <h2 class="article-link">
-                  <a href="/2015/07/24/low-IE-click-empty-block-bug/">在低版本 IE 中点击空 block 元素的问题</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="label-date"></i>2015-07-24
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#CSS" title="Category: CSS" rel="category">CSS</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-                </div>
-                <div class="article-desc">
-                    <div class="excerpt">
-                        <ul id="markdown-toc">
-  <li><a href="#section" id="markdown-toc-section">问题描述</a></li>
-</ul>
-
-<h2 id="section">问题描述</h2>
-
-<p>当我们点击一个空的、没有任何内容的 div 或者其他块级元素时。在 IE11 以下，是没有反应的。</p>
-
-
-                    </div>
-                    <div class="read-all">
-                        <a  href="/2015/07/24/low-IE-click-empty-block-bug/"><i class="label-readall"></i>Read All</a>
-                    </div>
-                </div>
-              </li>
-            
-              <li class="article-item">
-                <h2 class="article-link">
-                  <a href="/2015/07/09/JavaScript-Net/">JavaScript 阶段总结</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="label-date"></i>2015-07-09
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#JavaScript" title="Category: JavaScript" rel="category">JavaScript</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-                </div>
-                <div class="article-desc">
-                    <div class="excerpt">
-                        <p>做了一张思维导图。总结这几个月对 JavaScript 的学习吧，也是一个复习。也是我目前的技能树。</p>
-
-
-                    </div>
-                    <div class="read-all">
-                        <a  href="/2015/07/09/JavaScript-Net/"><i class="label-readall"></i>Read All</a>
+                        <a  href="/2016/06/14/Threejs-1/"><i class="label-readall"></i>Read All</a>
                     </div>
                 </div>
               </li>
@@ -356,10 +152,10 @@
             <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
             <span class="previous disable"><i class="fa fa-angle-left"></i></span>
           
-          <span class="page_number ">1 / 3</span>
+          <span class="page_number ">1 / 1</span>
           
-            <a href="/page2" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page3" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <span class="next disable"><i class="fa fa-angle-right"></i></span>
+            <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
           
         </div>
     </div>
@@ -369,25 +165,7 @@
     <dl class="list recent-ul" recent>
         <dt><i class=""></i>Recent Posts</dt>
         
-            <dd><a href="/2016/05/06/regular-expression-group/">浅谈正则表达式中的分组和引用</a></dd>
-        
-            <dd><a href="/2016/03/12/jekyll-theme-version-2.0/">对这个 jekyll 博客主题的改版和重构</a></dd>
-        
-            <dd><a href="/2016/01/01/History-API/">前端处理动态 url 和 pushStatus 的使用</a></dd>
-        
-            <dd><a href="/2015/07/24/low-IE-click-empty-block-bug/">在低版本 IE 中点击空 block 元素的问题</a></dd>
-        
-            <dd><a href="/2015/07/09/JavaScript-Net/">JavaScript 阶段总结</a></dd>
-        
-            <dd><a href="/2015/06/18/weinre/">Weinre --WebApp 调试工具</a></dd>
-        
-            <dd><a href="/2015/06/11/JavaScript-function/">JavaScript 函数</a></dd>
-        
-            <dd><a href="/2015/06/01/lenovo-front-end-interview/">联想服务前端实习面试经历</a></dd>
-        
-            <dd><a href="/2015/05/18/front-end-tools/">前端的一些资料和工具</a></dd>
-        
-            <dd><a href="/2015/04/12/Syncing-a-fork/">同步一个 fork</a></dd>
+            <dd><a href="/2016/06/14/Threejs-1/">Three.js学习笔记（一）</a></dd>
         
     </dl>
 
@@ -396,72 +174,9 @@
         <dt><i class=""></i>Categories</dt>
         
         <dd>
-            <a href="/category/#jekyll" class="categories-ddst-item" cate="jekyll">
+            <a href="/category/#Three.js" class="categories-ddst-item" cate="Three.js">
                 <span class="name">
-                    jekyll
-                </span>
-                <span class="badge">2</span>
-            </a>
-        </dd>
-        
-        <dd>
-            <a href="/category/#Bootstrap" class="categories-ddst-item" cate="Bootstrap">
-                <span class="name">
-                    Bootstrap
-                </span>
-                <span class="badge">1</span>
-            </a>
-        </dd>
-        
-        <dd>
-            <a href="/category/#Sublime" class="categories-ddst-item" cate="Sublime">
-                <span class="name">
-                    Sublime
-                </span>
-                <span class="badge">1</span>
-            </a>
-        </dd>
-        
-        <dd>
-            <a href="/category/#JavaScript" class="categories-ddst-item" cate="JavaScript">
-                <span class="name">
-                    JavaScript
-                </span>
-                <span class="badge">6</span>
-            </a>
-        </dd>
-        
-        <dd>
-            <a href="/category/#GitHub" class="categories-ddst-item" cate="GitHub">
-                <span class="name">
-                    GitHub
-                </span>
-                <span class="badge">1</span>
-            </a>
-        </dd>
-        
-        <dd>
-            <a href="/category/#Tools" class="categories-ddst-item" cate="Tools">
-                <span class="name">
-                    Tools
-                </span>
-                <span class="badge">1</span>
-            </a>
-        </dd>
-        
-        <dd>
-            <a href="/category/#Interview" class="categories-ddst-item" cate="Interview">
-                <span class="name">
-                    Interview
-                </span>
-                <span class="badge">1</span>
-            </a>
-        </dd>
-        
-        <dd>
-            <a href="/category/#CSS" class="categories-ddst-item" cate="CSS">
-                <span class="name">
-                    CSS
+                    Three.js
                 </span>
                 <span class="badge">1</span>
             </a>
@@ -475,9 +190,9 @@
     <div class="footer-wrapper">   
         <p class="contact">
             Contact me at: 
-            <a href="https://github.com/qijunxin" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a> 
+            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a> 
             <a href="mailto:1531211307@qq.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> 
-            <a href="http://weibo.com/qijunxin" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a> 
+            <a href="http://weibo.com/" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i></a> 
         </p>
         <p>
             本站总访问量 <span id="busuanzi_value_site_pv"></span> 次，本站访客数 <span id="busuanzi_value_site_uv"></span> 人次，本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
